@@ -1,0 +1,12 @@
+<form id="table-row-available-form-{{ pk }}"
+  hx-post="{{ request.path }}">
+  {% if form.available.value %}
+  <input type="hidden" name="available" value="false"/>
+  <button type="submit" class="btn fa fa-toggle-on" aria-hidden="true" style="color:darkblue">
+  </button>
+  {% else %}
+  <input type="hidden" name="available" value="true"/>
+  <button type="submit" class="btn  fa fa-toggle-off" aria-hidden="true">
+  </button>
+  {% endif %}
+</form>

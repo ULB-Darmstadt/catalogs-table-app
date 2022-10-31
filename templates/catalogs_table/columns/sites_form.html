@@ -1,0 +1,15 @@
+{% load i18n %}
+<form id="table-row-sites-form-{{ pk }}"
+  hx-post="{{ request.path }}">
+  {{ form.as_p }} 
+  <button type="submit" 
+          hx-target="#table-row-sites-form-{{ pk }}" 
+          hx-swap="innerHTML" class="btn btn-primary">
+          {% trans "Save" %}</button>
+  
+  <button class="btn-cancel" 
+          hx-get="{% url 'column_sites_list' pk=pk %}"
+          hx-target="#table-row-sites-form-{{ pk }}" 
+          hx-swap="innerHTML">
+          {% trans "Cancel" %}</button>
+</form>
