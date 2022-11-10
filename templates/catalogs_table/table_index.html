@@ -30,18 +30,20 @@
 
     <div class="page">
 
-    
-      
     {% block catalogs_table %}
     <!-- beginning of catalogs_table -->
       <div class="container-index" >
-      <form hx-get="{% url 'table_wrapper' %}" 
-          hx-target="div.container-table-index"
-          hx-swap="innerHTML" 
-          hx-trigger="change delay:400ms, keyup delay:400ms"
-          class="form-inline">
-        {{ filter.form }}
-    </form> 
+        {% if filter %}
+          <div class="col-sm-10 justify-center">
+          <form hx-get="{% url 'table_wrapper' %}" 
+            hx-target="div.container-table-index"
+            hx-swap="innerHTML" 
+            hx-trigger="change delay:400ms, keyup delay:400ms"
+            class="form-group">
+          {{ filter.form }}
+          </form> 
+          </div>
+          {% endif %}
         <div class="container-table-index"
              hx-trigger="load"
              hx-get="{% url 'table_wrapper' %}"

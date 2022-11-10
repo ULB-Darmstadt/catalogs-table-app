@@ -19,6 +19,7 @@ __pycache__/
 /htmlcov
 /plugins
 /.pytest_cache
+*.coverage
 
 /*.env
 !/.template.env

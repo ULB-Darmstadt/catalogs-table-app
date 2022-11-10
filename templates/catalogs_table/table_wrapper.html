@@ -2,6 +2,12 @@
 {% load i18n %}
 {% block table-wrapper %}
 <div class="table-container">
+    {% block catalogs_table_count %}
+        <div class="col-sm-1">
+    <br><br>
+    <h3 class="label label-primary text-center"> {{ object_list|length }} / {{ catalogs_count }}</h3>
+    </div>
+    {% endblock catalogs_table_count %}
     {% block table %}
         <table {% render_attrs table.attrs class="table" %}>
             {% block table.thead %}
@@ -47,7 +53,9 @@
 
     {% block pagination %}
     {% comment %} TODO fix table PAGINATION {% endcomment %}
+    
         {% if table.page and table.paginator.num_pages > 1 %}
+        
         <nav aria-label="Table navigation">
             <ul class="pagination">
             {% if table.page.has_previous %}
