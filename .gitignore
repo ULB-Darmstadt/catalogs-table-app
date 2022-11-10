@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+
+*~
+*-
+*.swp
+.DS_*
+
+# /config/settings/local.py
+/static_root
+/media_root
+/vendor
+/log
+/env
+/env2
+/env3
+/*.sqlite3
+/.coverage
+/htmlcov
+/plugins
+/.pytest_cache
+*.coverage
+
+/*.env
+!/.template.env
+!/.template.DEBUG.env
+!/.template.multisite.DB.env
