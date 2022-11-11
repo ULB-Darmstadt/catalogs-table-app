@@ -1,8 +1,6 @@
 # Catalogs Table - an app for RDMO
 
-An app for the RDMO - Research Data Management Organiser Django project:  
-* Home Page
-  * https://rdmorganiser.github.io
+An app for the [RDMO - Research Data Management Organiser](https://rdmorganiser.github.io) Django project.
 
 
 This app can be installed in the folder of the [rdmo-app](https://github.com/rdmorganiser/rdmo-app) and adds a page `/catalogs-table` with an interactive overview of the catalogs in the instance.
