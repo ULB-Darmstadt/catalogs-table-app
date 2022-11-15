@@ -2,34 +2,34 @@
 
 An app for the [RDMO - Research Data Management Organiser](https://rdmorganiser.github.io) Django project.
 
+Made for the Issue (https://github.com/rdmorganiser/rdmo/issues/448) and developed in PR (https://github.com/rdmorganiser/rdmo/pull/482).
 
 This app can be installed in the folder of the [rdmo-app](https://github.com/rdmorganiser/rdmo-app) and adds a page `/catalogs-table` with an interactive overview of the catalogs in the instance.
 
 
 ## Installation
 
-Suggested installation from the `<git-repo>` as a git `submodule`.
+Suggested installation from the `<git-repo-url>` as a git `submodule`.
 
 ```
 cd rdmo-app
-git submodule add catalogs-table <git-repo-url>
-git submodule update --remote --init
+git submodule add <git-repo-url> catalogs_table_app
 ```
 
 The only external requirement is `django_tables2`.
 
 ```bash
 # in the python env
-python3 -m pip install -r catalogs_table/requirements.txt
+python3 -m pip install -r catalogs_table_app/requirements.txt
 ```
 Add to the `settings.py`
 ```py
-INSTALLED_APPS += ['django_tables2', 'catalogs_table']
+INSTALLED_APPS += ['django_tables2', 'catalogs_table_app']
 ```
 Add to the `config/urls.py`
 ```py
 urlpatterns = [
     ...
-    path('catalogs-table/', include('catalogs_table.urls')),
+    path('catalogs-table/', include('catalogs_table_app.urls')),
 ]
 ```
