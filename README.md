@@ -7,6 +7,13 @@ Made for the Issue (https://github.com/rdmorganiser/rdmo/issues/448) and develop
 This app can be installed in the folder of the [rdmo-app](https://github.com/rdmorganiser/rdmo-app) and adds a page `/catalogs-table` with an interactive overview of the catalogs in the instance.
 
 
+<details>
+  <summary>Screenshot</summary>
+  
+  ![Catalog-Table](https://user-images.githubusercontent.com/13996213/201897504-6483dde5-b0f6-46f0-b4ae-8bfde7f5e9e1.PNG)
+  
+</details>
+
 ## Installation
 
 Suggested installation from the `<git-repo-url>` as a git `submodule`.
